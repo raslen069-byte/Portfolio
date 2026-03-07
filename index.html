@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative Developer Portfolio">
+    <title>Your Name | Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#" class="brand">
+                <img src="../../Downloads/logo.png" alt="Logo" class="brand-logo">
+            </a>
+            <nav class="header-nav">
+                <a href="#work" class="nav-item">Work</a>
+                <a href="#philosophy" class="nav-item">Philosophy</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#services" class="nav-item">What I Do</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            <button class="menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Fullscreen Menu -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <div class="menu-content">
+            <a href="#work" class="menu-link">
+                <span class="menu-number">01</span>
+                <span class="menu-text">Selected Work</span>
+            </a>
+            <a href="#philosophy" class="menu-link">
+                <span class="menu-number">02</span>
+                <span class="menu-text">Philosophy</span>
+            </a>
+            <a href="#about" class="menu-link">
+                <span class="menu-number">03</span>
+                <span class="menu-text">About Me</span>
+            </a>
+            <a href="#skills" class="menu-link">
+                <span class="menu-number">04</span>
+                <span class="menu-text">Skills</span>
+            </a>
+            <a href="#services" class="menu-link">
+                <span class="menu-number">05</span>
+                <span class="menu-text">What I Do</span>
+            </a>
+            <a href="#contact" class="menu-link">
+                <span class="menu-number">06</span>
+                <span class="menu-text">Get In Touch</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <p class="hero-label">Creative Developer</p>
+                <h1 class="hero-title">
+                    <span class="title-line">Building</span>
+                    <span class="title-line">creative</span>
+                    <span class="title-line highlight">web</span>
+                    <span class="title-line">experiences</span>
+                </h1>
+                <p class="hero-quote">"Simplicity is the ultimate sophistication." — Leonardo da Vinci</p>
+            </div>
+            <div class="hero-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Location</span>
+                    <span class="meta-value">Your City</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Availability</span>
+                    <span class="meta-value available">● Available</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Response Time</span>
+                    <span class="meta-value">&lt; 24 hours</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-footer">
+            <a href="#work" class="scroll-link">
+                <span>Explore Work</span>
+                <div class="arrow-down">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 5v14M5 12l7 7 7-7"/>
+                    </svg>
+                </div>
+            </a>
+            <div class="hero-social">
+                <span>Find me on:</span>
+                <div class="social-icons">
+                    <a href="https://github.com/yourusername" target="_blank" class="social-icon" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-1.334-.446-.309-.784-.811-.784-.811-.641-.87.037-.806.037-.806.71.05 1.085.729 1.085.729.632 1.084 1.661.773 2.068.591.064-.459.248-.773.448-.952-1.769-.201-3.626-.885-3.626-.885-.493-.332-.801-.811-.801-.811-.654-.888.044-.872.044-.872.724.05 1.106.745 1.106.745.646 1.107 1.891.788 2.355.603.018-.466.202-.789.398-.964-1.399-.159-2.869-.699-2.869-.699-.453-.332-.751-.811-.751-.811-.654-.888.044-.872.044-.872.724.051 1.106.745 1.106.745.646 1.107 1.891.788 2.355.603.018-.466.202-.789.398-.964z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:hello@example.com" class="social-icon" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Divider -->
+    <div class="quote-divider">
+        <p class="big-quote">"Code is like humor. When you have to explain it, it's bad."</p>
+        <span class="quote-author">— Cory House</span>
+    </div>
+
+    <!-- Work Section -->
+    <section id="work" class="work">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2 class="section-title">Selected Work</h2>
+        </div>
+
+        <div class="projects-list">
+            <article class="project-item">
+                <div class="project-link">
+                    <div class="project-visual">
+                        <div class="visual-placeholder" style="background: linear-gradient(135deg, #f97316 0%, #dc2626 100%);">
+                            <span>01</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-name">AETHER | Culinary Platform</h3>
+                        <p class="project-desc">Next-gen cooking experience with AI-powered recipes, interactive techniques, and culinary community features</p>
+                        <div class="project-tags">
+                            <span>HTML5/CSS3</span>
+                            <span>JavaScript</span>
+                            <span>Canvas API</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                    <div class="project-year">
+                        <a href="https://raslen069-byte.github.io/website/" target="_blank" class="project-link-btn">View Project →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-link">
+                    <div class="project-visual">
+                        <div class="visual-placeholder" style="background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);">
+                            <span>02</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-name">Bluetooth Web Interface</h3>
+                        <p class="project-desc">Web-based Bluetooth connectivity interface for device management and data transfer</p>
+                        <div class="project-tags">
+                            <span>Web Bluetooth</span>
+                            <span>JavaScript</span>
+                            <span>API</span>
+                            <span>Real-time</span>
+                        </div>
+                    </div>
+                    <div class="project-year">
+                        <a href="https://raslen069-byte.github.io/bleutooth/" target="_blank" class="project-link-btn">View Project →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-item">
+                <div class="project-link">
+                    <div class="project-visual">
+                        <div class="visual-placeholder" style="background: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);">
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-name">Portfolio Website</h3>
+                        <p class="project-desc">Modern minimalist portfolio with particle animations and creative interactions</p>
+                        <div class="project-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>Canvas</span>
+                            <span>Animations</span>
+                        </div>
+                    </div>
+                    <div class="project-year">
+                        <a href="https://raslen069-byte.github.io/Portfolio/" target="_blank" class="project-link-btn">View Project →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Quote Divider -->
+    <div class="quote-divider dark">
+        <p class="big-quote">"First, solve the problem. Then, write the code."</p>
+        <span class="quote-author">— John Johnson</span>
+    </div>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2 class="section-title">Philosophy</h2>
+        </div>
+
+        <div class="philosophy-content">
+            <div class="philosophy-item">
+                <span class="philosophy-number">01</span>
+                <h3 class="philosophy-title">Quality Over Quantity</h3>
+                <p class="philosophy-text">
+                    I believe in crafting fewer things, but crafting them exceptionally well. 
+                    Every line of code serves a purpose. Every pixel has intention.
+                </p>
+                <p class="philosophy-quote">"Less, but better." — Dieter Rams</p>
+            </div>
+
+            <div class="philosophy-item">
+                <span class="philosophy-number">02</span>
+                <h3 class="philosophy-title">User-Centered Design</h3>
+                <p class="philosophy-text">
+                    Technology should adapt to humans, not the other way around. I build 
+                    experiences that respect users' time, attention, and intelligence.
+                </p>
+                <p class="philosophy-quote">"Design is not just what it looks like. Design is how it works." — Steve Jobs</p>
+            </div>
+
+            <div class="philosophy-item">
+                <span class="philosophy-number">03</span>
+                <h3 class="philosophy-title">Continuous Learning</h3>
+                <p class="philosophy-text">
+                    The tech landscape evolves daily. I stay curious, keep learning, and 
+                    embrace change as an opportunity to grow and improve.
+                </p>
+                <p class="philosophy-quote">"The only way to do great work is to love what you do." — Steve Jobs</p>
+            </div>
+
+            <div class="philosophy-item">
+                <span class="philosophy-number">04</span>
+                <h3 class="philosophy-title">Open & Collaborative</h3>
+                <p class="philosophy-text">
+                    Great things happen when people work together. I believe in transparency, 
+                    knowledge sharing, and building communities around code.
+                </p>
+                <p class="philosophy-quote">"Alone we can do so little; together we can do so much." — Helen Keller</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Divider -->
+    <div class="quote-divider">
+        <p class="big-quote">"It's not a bug. It's an undocumented feature."</p>
+        <span class="quote-author">— Anonymous</span>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2 class="section-title">About</h2>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                <p class="lead">
+                    I'm a passionate developer focused on creating clean, functional, 
+                    and visually appealing web applications.
+                </p>
+                <p>
+                    With a year of hands-on experience and 5 completed projects, I've developed 
+                    a strong foundation in modern web technologies. My work ranges from culinary 
+                    platforms with interactive recipes to Bluetooth connectivity interfaces.
+                </p>
+                <p>
+                    I believe in writing code that is not only functional but also maintainable 
+                    and elegant. Every project is an opportunity to learn, grow, and create 
+                    something meaningful.
+                </p>
+                <div class="about-signature">
+                    <p class="signature-quote">"Code is poetry in motion."</p>
+                    <p class="signature-name">— Your Philosophy</p>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="info-block">
+                    <h4>Expertise</h4>
+                    <ul class="info-list">
+                        <li>Frontend Development</li>
+                        <li>Backend Architecture</li>
+                        <li>UI/UX Design</li>
+                        <li>Performance Optimization</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h4>Technologies</h4>
+                    <ul class="info-list">
+                        <li>JavaScript / TypeScript</li>
+                        <li>React / Vue / Next.js</li>
+                        <li>Node.js / Python</li>
+                        <li>AWS / Docker / PostgreSQL</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="5">0</span>
+                    <span class="stat-label">Projects Completed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="0">0</span>
+                    <span class="stat-label">Ready for First Client</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-count="1">0</span>
+                    <span class="stat-label">Year Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Skills & Tools</h2>
+            </div>
+            <div class="skills-content">
+                <div class="skills-column">
+                    <h3 class="skills-category">Frontend</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <span>HTML5 / CSS3</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>JavaScript (ES6+)</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Responsive Design</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span>Canvas API</span>
+                            <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-column">
+                    <h3 class="skills-category">Tools & Technologies</h3>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Web Bluetooth API</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">NPM / Yarn</span>
+                        <span class="skill-tag">Chrome DevTools</span>
+                        <span class="skill-tag">Vercel / Netlify</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Divider -->
+    <div class="quote-divider dark">
+        <p class="big-quote">"Talk is cheap. Show me the code."</p>
+        <span class="quote-author">— Linus Torvalds</span>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <span class="section-number">05</span>
+            <h2 class="section-title">What I Do</h2>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <span class="service-number">01</span>
+                <h3 class="service-title">Frontend Development</h3>
+                <p class="service-desc">
+                    Building responsive, interactive websites with clean HTML, CSS, and JavaScript. 
+                    Focus on user experience and modern design patterns.
+                </p>
+                <ul class="service-list">
+                    <li>Responsive Design</li>
+                    <li>Interactive UIs</li>
+                    <li>Animation & Effects</li>
+                    <li>Performance Optimization</li>
+                </ul>
+                <p class="service-quote">"First, solve the problem. Then, write the code." — John Johnson</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">02</span>
+                <h3 class="service-title">Web APIs & Integration</h3>
+                <p class="service-desc">
+                    Connecting applications with modern web APIs including Web Bluetooth, 
+                    Canvas, and browser APIs for enhanced functionality.
+                </p>
+                <ul class="service-list">
+                    <li>Web Bluetooth API</li>
+                    <li>Canvas API</li>
+                    <li>REST APIs</li>
+                    <li>Real-time Data</li>
+                </ul>
+                <p class="service-quote">"APIs are the backbone of modern web applications."</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">03</span>
+                <h3 class="service-title">UI/UX Design</h3>
+                <p class="service-desc">
+                    Creating intuitive interfaces with attention to visual hierarchy, 
+                    typography, and color theory for engaging user experiences.
+                </p>
+                <ul class="service-list">
+                    <li>User-Centered Design</li>
+                    <li>Visual Design</li>
+                    <li>Prototyping</li>
+                    <li>Design Systems</li>
+                </ul>
+                <p class="service-quote">"Design is not just what it looks like. Design is how it works." — Steve Jobs</p>
+            </div>
+
+            <div class="service-card">
+                <span class="service-number">04</span>
+                <h3 class="service-title">Creative Solutions</h3>
+                <p class="service-desc">
+                    Bringing ideas to life with creative coding, animations, and 
+                    unique interactive experiences that stand out.
+                </p>
+                <ul class="service-list">
+                    <li>Creative Coding</li>
+                    <li>Particle Animations</li>
+                    <li>Interactive Elements</li>
+                    <li>Custom Solutions</li>
+                </ul>
+                <p class="service-quote">"Creativity is intelligence having fun." — Albert Einstein</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Divider -->
+    <div class="quote-divider">
+        <p class="big-quote">"Programming isn't about what you know. It's about what you can figure out."</p>
+        <span class="quote-author">— Chris Pine</span>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <span class="section-number">06</span>
+            <h2 class="section-title">Let's Connect</h2>
+        </div>
+
+        <div class="contact-layout">
+            <div class="contact-intro">
+                <p class="contact-text">
+                    Have a project in mind? I'm always interested in hearing about new ideas 
+                    and opportunities. Let's create something amazing together.
+                </p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:hello@example.com" class="contact-method">
+                        <span class="method-icon">✉</span>
+                        <span class="method-text">hello@example.com</span>
+                    </a>
+                    <div class="contact-method">
+                        <span class="method-icon">📍</span>
+                        <span class="method-text">Your City, Country</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">Dribbble</a>
+                </div>
+
+                <div class="contact-quote">
+                    <p>"The best time to plant a tree was 20 years ago. The second best time is now."</p>
+                    <span>— Chinese Proverb</span>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-field">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Your Name</label>
+                    <div class="field-line"></div>
+                </div>
+                <div class="form-field">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email Address</label>
+                    <div class="field-line"></div>
+                </div>
+                <div class="form-field">
+                    <textarea id="message" name="message" rows="4" placeholder=" " required></textarea>
+                    <label for="message">Tell me about your project</label>
+                    <div class="field-line"></div>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <span>Send Message</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="brand">
+                    <img src="logo.png" alt="Logo" class="brand-logo">
+                </a>
+                <p class="footer-tagline">Building digital products with purpose and passion.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#work">Work</a>
+                <a href="#philosophy">Philosophy</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#services">What I Do</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2026 Your Name. All rights reserved.</p>
+                <p class="footer-quote">"Code is poetry written for machines to read and humans to maintain."</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
